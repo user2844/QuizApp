@@ -1,0 +1,104 @@
+
+.mainContainer{
+    border: 5px solid red;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../../assets/images/loginBackground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.singupCard{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.177);
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.608);
+}
+
+.heading{
+    text-align: center;
+
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+.form > input{
+    margin: 10px 0px;
+    padding: 8px;
+    border: none;
+    background-color: rgba(246, 245, 243, 0.147);
+    border: 1px solid rgba(255, 255, 255, 0.352);
+    border-radius: 15px;
+    transition: all 0.6s ease;
+
+}
+
+.form input::placeholder{
+    color: rgba(245, 245, 245, 0.571);
+    margin-left: 2px;
+}
+
+.form input:hover{
+  background-color:  rgba(246, 245, 243, 0.347);
+}
+
+.form input:focus{
+    background-color:  rgba(246, 245, 243, 0.347);
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.291);
+    transform: scale(1.01);
+    outline: none;
+
+}
+
+
+.errorMsg{
+    text-align: center;
+    color: red;
+}
+
+
+.createButton{
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    margin: 10px;
+}
+
+.createButton:active{
+    background-color: rgb(44, 43, 43);
+    color: black;
+}
+
+
+
+.haveAccount{
+    display: flex;
+    justify-content: flex-end;
+    gap:5px;
+    margin-top: 10px;
+}
+
+.login{
+    font-weight: bolder;
+}
+
+.login:hover{
+    color: white;
+}

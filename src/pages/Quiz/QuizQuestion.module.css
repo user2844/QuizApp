@@ -1,0 +1,46 @@
+.quizContainer {
+    width: 100%;
+    max-width: 800px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid rgb(221, 220, 220);
+    border-radius: 20px;
+    padding: 20px;
+    height: auto;
+
+    box-shadow: 1px 2px 1px 3px rgba(108, 104, 104, 0.52);
+    background-color: rgb(250, 185, 106);
+}
+
+
+
+.answers{
+    padding: 20px;
+    width: min(100%, 600px);
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+.nextBtn {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    height: auto;
+}
+
+.nextBtn > button{
+    border: none;
+    width: 100%; 
+    background-color: rgb(36, 163, 36);
+    border-radius: 10px;
+    padding: 5px; 
+    font-size: 1rem;
+    color: white;  
+}

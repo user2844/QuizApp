@@ -1,0 +1,23 @@
+.button{
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.mcq-btn{
+    background-color: skyblue;
+    font-weight:600;
+}
+
+
+.toggle-btn{
+    background-color: greenyellow;
+    font-weight: bolder;
+    transition: all 0.5s ease;
+}
+
+.toggle-btn:active{
+    transform: translateY(-4px);
+    background-color: rgb(91, 148, 5);
+    box-shadow: 0px 8px 35px rgba(0, 0, 0, 0.409);
+}

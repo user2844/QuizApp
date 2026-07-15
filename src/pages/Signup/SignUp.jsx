@@ -3,6 +3,8 @@ import styles from  './SignUp.module.css';
 import Button from '../../components/Button/Button';
 import {Link} from 'react-router-dom';
 import {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function SignUp(){
 
@@ -10,6 +12,7 @@ export default function SignUp(){
   const[password, setpassword] = useState("");
   const[matchpassword, setmatchpassword] = useState("");
   const[error, seterror] = useState("");
+  const navigate = useNavigate();
 
   function createAccount(e){
     e.preventDefault();
@@ -23,7 +26,29 @@ export default function SignUp(){
       return;
     }
     seterror("")
-    console.log('createaccount fn works') 
+   
+     
+    //users array
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+
+
+   const exisitingUser = users.some(user => user.username === username)
+
+   if(exisitingUser){
+    seterror("username already exists");
+    return;
+   }
+
+   users.push({
+    username,
+    password
+   });
+
+      localStorage.setItem('users', JSON.stringify(users));
+    
+      alert('your account has been created');
+      navigate('/');
+
   }
 
     return(
@@ -40,7 +65,7 @@ export default function SignUp(){
 
         {error && <p className={styles.errorMsg}>{error}</p>}
 
-        <Button type='submit' text="Create Account" variant= "toggle-btn" className={styles.createButton}/>
+        <Button type='submit' text="Create Account" variant= "toggleBtn" className={styles.createButton}/>
 
         <hr></hr>
 
@@ -55,4 +80,4 @@ export default function SignUp(){
 
     )
 }
-    
+   

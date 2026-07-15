@@ -6,5 +6,6 @@ export default function Button({text, variant ="" , className="",onClick, type="
         type={type} onClick={onClick}>
             {text}
         </button>
+
     )
 }

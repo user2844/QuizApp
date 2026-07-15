@@ -1,13 +1,15 @@
 import styles from './Login.module.css';
 import Button from '../../components/Button/Button.jsx'
 import {Link} from 'react-router-dom';
-import {useState} from 'react'
+import {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login(){
     const [username, setUsername] = useState("");
     const [password, setpassword] = useState("");
     const [error, setError] = useState("")
     
+    const navigate = useNavigate();
 
     function handleSubmit(e){
         e.preventDefault();
@@ -17,12 +19,13 @@ export default function Login(){
             return;
         }
         setError("");
-        if(username.trim() === "admin" && password.trim() === "admin"){
-             console.log("submitted")
-        }else{
-            console.log("username or password didn't match")
-        }
-       
+        const users = JSON.parse(localStorage.getItem('users'))|| [];
+        console.log(users)
+       const userExist = users.some(user => user.username === username && user.password === password)
+
+       if(userExist){
+            navigate('/dashboard');
+       }
     }
 
     return(
@@ -40,7 +43,7 @@ export default function Login(){
                         <Link to="/forgot-password">Forgot Password?</Link>
                      </div>
 
-                    <Button type='submit' text="Log In" variant="toggle-btn" className={styles.subBtn}/>
+                    <Button type='submit' text="Log In" variant="toggleBtn" className={styles.subBtn}/>
 
                     <hr></hr>
                     <div className={styles.noAccount}>  

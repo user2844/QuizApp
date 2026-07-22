@@ -1,0 +1,17 @@
+.mainWrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: #e65795;
+  background: radial-gradient(
+    circle,
+    rgba(225, 50, 126, 0.427) 15%,
+    rgba(194, 255, 189, 0.905) 80%
+  );
+}
+
+
+.bodyDiv {
+  display: flex;
+  padding: 8px;
+  gap: 8px;
+}

@@ -1,20 +1,72 @@
 .button{
     border: none;
-    padding: clamp(6px, 1vw, 12px);
+    padding: clamp(10px, 1vw, 12px);
     border-radius: 10px;
+    font-size: clamp(1rem, 1vw, 1rem);
+    font-weight: bolder;
+}
+
+.mcqBtn{
+    background-color: rgba(240, 15, 15, 0.261);
+    backdrop-filter: blur(10px);
+    font-weight: bolder;
     font-size: clamp(0.75rem, 1vw, 1rem);
+    padding: clamp(6px, 1vw, 12px);
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 8px 35px rgba(240, 15, 15, 0.561);
+
 }
 
-.mcq-btn{
-    background-color: skyblue;
-    font-weight:600;
+.mcqBtn:hover{
+    background-color: rgba(26, 168, 244, 0.393);
+    backdrop-filter: blur(10px);
+    color: white;
 }
 
+.mcqBtn:active{
+    transform: scale(0.7);
+}
+.correctBtn:hover,
+.wrongBtn:hover,
+.mcqBtn:disabled:hover {
+    cursor: default;
+}
+.mcqBtn:disabled:hover {
+    transform: none;
+    background-color: rgba(240, 15, 15, 0.261);
+    color: black;
+}
+
+.correctBtn{
+    background-color: rgba(21, 199, 56, 0.393);
+    box-shadow: 0px 8px 35px rgba(25, 228, 66, 0.593);
+    transition: all 0.5s ease;
+}
+
+.correctBtn:hover{
+    transform: scale(1.1);
+    background-color: rgba(10, 149, 38, 0.393);
+}
+
+.wrongBtn{
+    background-color: rgba(244, 30, 30, 0.707);
+    box-shadow: 0px 8px 35px rgba(189, 28, 28, 0.807);
+    transition: all 0.5s ease;
+}
+
+.wrongBtn:hover{
+    transform: scale(1.1);
+    background-color: rgba(244, 30, 30, 0.707);
+}
 
 .toggleBtn{
     background-color: greenyellow;
     font-weight: bolder;
     transition: all 0.5s ease;
+}
+
+.toggleBtn:hover{
+    transform: scale(1.02) ;
 }
 
 .toggleBtn:active{

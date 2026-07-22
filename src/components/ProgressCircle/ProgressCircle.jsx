@@ -1,9 +1,9 @@
 import style from './ProgressCircle.module.css';
 
 export default function ProgressCircle({
-    progress = 75,
-     score = 1200
-    }){
+    progress = 0,
+     score = 0 
+       }){
 
     const radius = 70;
     const circumference = 2 * Math.PI * radius;

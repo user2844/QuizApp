@@ -1,0 +1,41 @@
+/*This is for nav bar styling*/
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 5px;
+  box-shadow:  0px 5px 24px 2px  rgba(166, 247, 159, 0.905);
+ 
+}
+
+.header h3{
+  font-size: clamp(1rem, 1.2vw, 1.8rem);
+}
+
+
+.lefthead{
+display: flex;
+align-items: center;
+}
+
+
+.righthead{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile{
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 1.2vw, 20px);
+}
+
+.profile img{
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+/* nav bar style*/

@@ -20,7 +20,6 @@ export default function Login(){
         }
         setError("");
         const users = JSON.parse(localStorage.getItem('users'))|| [];
-        console.log(users)
        const userExist = users.some(user => user.username === username && user.password === password)
 
        if(userExist){

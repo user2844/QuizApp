@@ -1,6 +1,6 @@
 .circleCard{
     position: relative;
-    width: clamp(140px, 20vw, 220px);
+    width: clamp(100px, 20vw, 220px);
     aspect-ratio: 1;
     display: flex;
     justify-content: center;

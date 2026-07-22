@@ -9,17 +9,6 @@
   );
 }
 
-.header {
-  width: 100%;
-  border: 2px solid blue;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-}
-
-.header h3{
-  font-size: clamp(1rem, 1.2vw, 1.8rem);
-}
 
 .bodyDiv {
   display: flex;
@@ -27,12 +16,6 @@
   gap: 8px;
 }
 
-.sidebar {
-  border: 1px solid blue;
-  width: clamp(50px,8vw,80px);
-
-  min-height: 90vh;
-}
 
 .dashDiv {
   flex: 1;
@@ -51,11 +34,12 @@
   grid-area: profileDiv;
   min-width: 0;
   border: 1px solid rgb(250, 242, 242);
-  background-color: rgba(255, 255, 255, 0.389) ;
+  background-color: rgba(255, 255, 255, 0.289) ;
   backdrop-filter: blur(10px);
   border-radius: 10px;
   display: flex;
   gap: 10px;
+  box-shadow: 0px 5px 24px 2px  rgba(166, 247, 159, 0.905);
 }
 
 .contextDiv{
@@ -97,6 +81,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
 
 .imgDiv img{
@@ -113,9 +98,10 @@
   flex-direction: column;
   gap: 10px;
   padding: 10px;
-  background-color: rgba(242, 242, 189, 0.315);
+  background-color: rgba(242, 242, 189, 0.285);
   backdrop-filter: blur(10px);
   border-radius: 10px;
+  box-shadow: 0px 5px 24px 2px  rgba(166, 247, 159, 0.905);
 
 }
 
@@ -137,11 +123,12 @@
   border: 2px solid rgba(255, 255, 255, 0.779);
   height: max-content;
   border-radius: 15px;
+  box-shadow: 1px 5px 24px 2px  rgba(166, 247, 159, 0.905);
 
 }
 
 
-@media (max-width: 820px) {
+@media (max-width: 900px) {
     .dashDiv{
       grid-template-columns: 1fr;
       grid-template-rows: auto;
